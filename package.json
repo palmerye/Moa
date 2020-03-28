@@ -1,0 +1,22 @@
+{
+  "name": "moa",
+  "version": "1.0.0",
+  "description": "like koa",
+  "main": "lib/application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palmerye/Moa.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "palmerye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/palmerye/Moa/issues"
+  },
+  "homepage": "https://github.com/palmerye/Moa#readme"
+}
