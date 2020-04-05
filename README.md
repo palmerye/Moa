@@ -2,6 +2,19 @@
 
 > follow Koa.
 
+## Use it
+
+```javascript
+const Moa = require('./application')
+const app = new Moa()
+
+app.use((ctx, next) => {
+  ctx.body = 'Hello World';
+});
+
+app.listen(3000)
+```
+
 ## 手撸一个koa
 
 ### koa 框架分析
@@ -36,7 +49,7 @@ server.listen(3000);
     - 中间件机制，基于洋葱模型
     - `compose`函数，`next`跳到下一个中间件
 
-### 中间件compose实现
+### 重点：中间件compose实现
 
 use多个中间件的场景如下，在next函数执行时，跳出当前中间件，到下一个中间件继续执行
 
@@ -83,3 +96,5 @@ compose(middlewares, ctx) {
 }
 // 在每一个请求过来时，洋葱模型开始执行，调用compose(middlewares, ctx)
 ```
+
+koa的剥洋葱模型在koa1中使用的是`generator + co.js`去实现的，koa2则使用了`async/await + Promise`去实现的
