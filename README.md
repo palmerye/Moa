@@ -98,3 +98,5 @@ compose(middlewares, ctx) {
 ```
 
 koa的剥洋葱模型在koa1中使用的是`generator + co.js`去实现的，koa2则使用了`async/await + Promise`去实现的
+
+中间件的模型其实就是面向切面编程(AOP)，可以在不侵入业务代码的情况下，加入场景需求。
